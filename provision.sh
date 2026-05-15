@@ -162,7 +162,7 @@ mkdir -p /home/z001/logs/active
 mkdir -p /home/z001/photos
 mkdir -p /home/z001/photos_backup
 mkdir -p /home/z001/photos_archive
-mkdir -p /mnt/usb
+sudo mkdir -p /mnt/usb
 log "Directories created"
 
 # ── Step 7: Create .env ───────────────────────────────────────────────────────

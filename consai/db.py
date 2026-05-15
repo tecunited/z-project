@@ -43,7 +43,6 @@ def init_db():
                 unit_id             TEXT,
                 installation_id     TEXT,
                 camera_type         TEXT,
-                camera_type         TEXT,
                 lat                 REAL,
                 lon                 REAL,
                 location_name       TEXT,

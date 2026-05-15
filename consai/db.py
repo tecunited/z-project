@@ -41,7 +41,6 @@ def init_db():
 
                 -- metadata
                 unit_id             TEXT,
-                unit_id             TEXT,
                 installation_id     TEXT,
                 camera_type         TEXT,
                 camera_type         TEXT,

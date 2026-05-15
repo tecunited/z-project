@@ -1,0 +1,11 @@
+.env
+*.sqlite
+logs/
+photos/
+photos_backup/
+photos_archive/
+__pycache__/
+*.pyc
+.idea/
+*.iml
+credentials.json

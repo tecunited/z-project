@@ -1,0 +1,12 @@
+[Unit]
+Description=Consai Sync Timer
+Requires=sync.service
+
+[Timer]
+OnBootSec=60
+OnUnitActiveSec=5min
+AccuracySec=5s
+Persistent=true
+
+[Install]
+WantedBy=timers.target

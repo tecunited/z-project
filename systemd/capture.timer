@@ -1,0 +1,12 @@
+[Unit]
+Description=Consai Capture Timer
+Requires=capture.service
+
+[Timer]
+OnBootSec=30
+OnUnitActiveSec=1min
+AccuracySec=1s
+Persistent=true
+
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,17 @@
+[Unit]
+Description=Consai Sync Service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=z001
+WorkingDirectory=/home/z001
+Environment=PYTHONPATH=/home/z001
+ExecStart=/usr/bin/python3 -m consai.sync
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=consai-sync
+
+[Install]
+WantedBy=multi-user.target

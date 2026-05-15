@@ -1,0 +1,19 @@
+[Unit]
+Description=Consai Watchdog Service
+After=network.target capture.timer sync.timer
+Wants=network.target
+
+[Service]
+Type=simple
+User=z001
+WorkingDirectory=/home/z001
+Environment=PYTHONPATH=/home/z001
+ExecStart=/usr/bin/python3 -m consai.watchdog
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=consai-watchdog
+
+[Install]
+WantedBy=multi-user.target

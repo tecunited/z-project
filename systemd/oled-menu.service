@@ -1,0 +1,18 @@
+[Unit]
+Description=Consai OLED Menu
+After=multi-user.target
+
+[Service]
+Type=simple
+User=z001
+WorkingDirectory=/home/z001
+Environment=PYTHONPATH=/home/z001
+ExecStart=/usr/bin/python3 -m ui.main
+Restart=always
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=consai-oled
+
+[Install]
+WantedBy=multi-user.target

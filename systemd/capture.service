@@ -1,0 +1,17 @@
+[Unit]
+Description=Consai Capture Service
+After=network.target
+Wants=network.target
+
+[Service]
+Type=oneshot
+User=z001
+WorkingDirectory=/home/z001
+Environment=PYTHONPATH=/home/z001
+ExecStart=/usr/bin/python3 -m consai.capture
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=consai-capture
+
+[Install]
+WantedBy=multi-user.target
